@@ -15,7 +15,7 @@ paths:
       tags:
         - RFQtag
       description: Request a quoute 
-      operationId: getQuote
+      operationid: getQuote
       requestBody: 
         content: 
           application/json: 
