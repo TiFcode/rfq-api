@@ -28,16 +28,29 @@ components:
   schemas:
     Quotation:
       type: object
-      properties:
-        id:
-          type: integer
-        product:
+      properties: 
+        id: 
+          type: string 
+          format: uuid 
+          maxLength: 100
+        product: 
+          type: string 
+          maxLength: 20 
+          pattern: '(\w+\W*)*'  
+        quantity: 
+          type: integer 
+          format: int32 
+          minimum: 0 
+          maximum: 1000 
+        price: 
+          type: number 
+          minimum: 0 
+        shipment: 
           type: string
-        quantity:
-          type: integer
-        price:
-          type: number
-        shipment:
-          type: string
-        mode:
-          type: string
+          enum: 
+            - FOB 
+            - DAT
+        mode: 
+          type: string 
+          pattern: "[A-Z]{3}" 
+          maxLength: 3
