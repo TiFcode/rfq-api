@@ -32,6 +32,7 @@ components:
         id: 
           type: string 
           format: uuid 
+          maxLength: 100
         product: 
           type: string 
           maxLength: 20 
@@ -45,7 +46,7 @@ components:
           type: number 
           minimum: 0 
         shipment: 
-          type: string 
+          type: string
           enum: 
             - FOB 
             - DAT
